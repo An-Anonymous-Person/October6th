@@ -1,0 +1,25 @@
+import random
+# List of random answers
+answers = ["How should I know?",
+           "To solve your question you have to run around in circles while flailing you arms",
+           "Go ask a professional",
+           "*do you really want to know?* asks the program",
+           "to all of your questions is... \n32",
+           "dont even ask",
+           "I dont know",
+           " Just take a deep breath and just figure it out",
+           "Error",
+           "everything happens for a reason",
+           " *tries to hide*",
+           "i dont care about your problems :P",
+           "hidden in plain sight",
+           "Just ask yourself do I already know the answer?'",
+           " x = 1 is the answer",
+           " what if I told you that there int a solution for that, how would you react?",
+           "When in doubt, pineapple is the answer"]
+
+question = input("Please enter a question about anything") # accepts input
+print("So your questions is: " + question) # displays the inputted answer
+selection = random.choice(answers) # selects a random answer
+print("\nThe answer : \n" + selection) # prints a randome answer
+
