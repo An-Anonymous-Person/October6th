@@ -1,0 +1,29 @@
+import random
+
+cars = ["INFINITI", "NISSAN", "LEXUS", "ACURA", "HONDA", "TOYOTA"]
+# these are the list of cars that could be turned into an anagrams
+
+selection = random.choice(cars)  # selects a random car
+answer = selection  # gives the variable "answer" the value to a random car
+
+jumble = list(selection)
+
+for current_index in range(len(jumble)):
+    random_index = random.randrange(0, len(jumble))  # gets a random number from 0 to the length of the psudo-random
+    # selected car
+    temp = jumble[current_index]  # creates a temporary variable to hold the current letter of the word
+    jumble[current_index] = jumble[random_index]  # takes a random letter by using the random number 
+    # and assigns it to the current letter
+    jumble[random_index] = temp  # takes the original letter and assigns it to the randomly selected letter
+
+for letter in jumble:
+    print(letter)
+
+guess = input("\nWhat kind of car is the same as the anagram?") # gets the input from the user
+guess = guess.upper()  # takes the guess and makes it all uppercase
+
+if guess == answer:
+    print("You guessed...\n Correctly\n You get a Cookie!")
+else:
+    print("The correct answer is:\n" + answer)
+# Checks to see if your answer is correct
