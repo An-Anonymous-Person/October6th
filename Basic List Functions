@@ -1,0 +1,16 @@
+cars = []
+x = 1
+i = ""
+while i != "done":
+    inputtedCar = input("Please enter a car or write 'done' if you are done: ")
+    if inputtedCar != "done":
+        cars.append(inputtedCar)
+        cars.sort()
+        x += 1
+    else:
+        i = inputtedCar
+
+cars.sort()
+print("\nThe cars that you have wrote include: ")
+for thecars in cars:
+    print(thecars)
